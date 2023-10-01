@@ -79,7 +79,7 @@ const Board = () => {
 
         let r = currColumns[c];
         if (r < 0) {
-            console.log("Out of Board");
+            // show some kind of alert message
             return;
         }
 
