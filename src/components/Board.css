@@ -1,0 +1,22 @@
+#board{
+    height: 540px;
+    width: 630px;
+
+    background-color: #212529;
+    border: 10px solid #212529;
+    border-radius: 25px;
+
+    margin: 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tile{
+    height: 77px;
+    width: 77px;
+    margin: 5px;
+    border: 5px solid 212529;
+
+    background-color: white;
+    border-radius: 50%;
+}
