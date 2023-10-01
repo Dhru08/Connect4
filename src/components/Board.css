@@ -20,3 +20,25 @@
     background-color: white;
     border-radius: 50%;
 }
+
+#playerInfo-width{
+    width: 630px;
+}
+
+@media (max-width: 685px) {
+    #board {
+        width: 370px; 
+        height: 318px;
+    }
+
+    .tile {
+        width: 45px;
+        height: 45px;
+        margin: 2.5px;
+        border: 1px solid #212529;
+    }
+
+    #playerInfo-width{
+        width: 370px;
+    }
+}

@@ -1,9 +1,10 @@
 import React from 'react';
+import './Board.css'
 
 const PlayerInfo = ({ currentPlayer, isDraw, winner }) => {
     return (
         <div className="mt-4">
-            <div className="d-flex justify-content-around align-items-center" style={{ width: "630px" }}>
+            <div className="d-flex justify-content-around align-items-center" id="playerInfo-width">
                 {(isDraw) ? (
                     <>
                         {isDraw && <h1 className="text-center">It's a draw!</h1>}
