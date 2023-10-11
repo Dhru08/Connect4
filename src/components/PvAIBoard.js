@@ -25,7 +25,7 @@ const Board = () => {
         }
 
         const timerId = setTimeout(() => {
-            const aiColumn = AImove(currColumns);
+            const aiColumn = AImove(board,currColumns);
             makeMove(aiColumn);
         }, 1000);
 
@@ -48,7 +48,22 @@ const Board = () => {
     }
 
     function makeMove(c) {
+
+        console.log(c);
+        console.log(currColumns);
+
+        if(typeof c === 'undefined'){
+            console.log("Why c?");
+            return;
+        }
+
         const r = currColumns[c];
+
+        if(typeof r === 'undefined'){
+            console.log("Why r?");
+            return;
+        }
+
         const newColumns = [...currColumns];
         newColumns[c] -= 1;
         const newBoard = [...board];
@@ -58,7 +73,7 @@ const Board = () => {
         setCurrColumns(newColumns);
         setMoves((prevMoves) => prevMoves + 1);
 
-        if (checkWin(newBoard, r, c, currPlayer)) {
+        if (checkWin(newBoard, r, c)) {
             setGameOver(true);
             setWinner(currPlayer);
         } else {
